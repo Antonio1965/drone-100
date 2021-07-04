@@ -5,8 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 
+  // NavBar
+  .nav-title {
+    display: flex;
+    justify-content: center;
+    font-family: "Fredoka One", cursive;
+    font-size: 3.5rem;
+    letter-spacing: 0.8rem;
+    margin-left: 40px;
+    color:azure;
+  }
+  .carro{
+    color: azure;
+  }
+  .boton{
+    color: azure;
+  }
+
 //   Footer
-.main-footer{
+.footer{
   font-family:'Fredoka One', cursive ;
     background-color: aqua;
     text-align: center;

@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
   },
   
 }));
-
-export function Product() {
+                // --- Destructuracion de objetos.---
+export function Product({product:{id, name, productType, image, price, rating, description}}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -54,27 +54,27 @@ export function Product() {
               variant="h5"
               color="textSecondary"
             >
-              {accounting.formatMoney(50)}
+              {accounting.formatMoney(price, )}
             </Typography>
           }
-        title="Drone-Warr"
+        title={name}
         subheader="In Stock"
       />
       <CardMedia
         className={classes.media}
-        image='https://th.bing.com/th/id/OIP.4CFwGOvHKH58AHtBrjUcGQHaEK?pid=ImgDet&rs=1'
-        title="Drone-Warr"
+        image={image}
+        title={name}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          Drone-Warr-2021.
+          {productType}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
       <IconButton aria-label="Add to Cart">
           <AddShoppingCart fontSize="large" />
         </IconButton>
-        {Array(5)
+        {Array(rating)
           .fill()
           .map((_, i) => (
             <p>&#11088;</p>
@@ -93,13 +93,13 @@ export function Product() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-           Drone todo terreno.
+          {name}
           </Typography>
           <Typography paragraph>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, labore.
+            {description}
           </Typography>
           <Typography>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, repudiandae.
+           {description}
           </Typography>
         </CardContent>
       </Collapse>

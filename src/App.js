@@ -1,20 +1,18 @@
 import {Footer} from "./components/Footer";
-import {Product} from './components/Product';
 import { NavBar } from "./components/NavBar";
-import { Products } from './components/Products';
+import { ItemListContainer } from './components/ItemListContainer';
 
 import './Sass/app.css';
 
 
-function App() {
+export function App() {
   return (
     <>
       <NavBar title='Drone.Co'/>
-      {/* <Product/> */}
-      <Products/>
+      <ItemListContainer/>
       <Footer autor="Copyright &copy;, derechos reservados Drone.Co -Junio 2021" />
     </>
   );
 }
 
-export default App;
+

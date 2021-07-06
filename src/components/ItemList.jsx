@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
                 // --- Destructuracion de objetos.---
-export function Product({product:{id, name, productType, image, price, rating, description}}) {
+export function ItemList({product:{id, name, productType, image, price, rating, description}}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 

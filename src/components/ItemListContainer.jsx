@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { Product } from './Product';
+import { ItemList } from './ItemList';
 import {Grid} from "@material-ui/core";
 import products from "../product-data";
 
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const Products = () => {
+export const ItemListContainer = () => {
   const classes = useStyles();
 
   return (
@@ -21,7 +21,7 @@ export const Products = () => {
         {                           
             products.map(product => (
              <Grid item xs={12} sm={6} md={4} lg={3}>
-                 <Product key={product.id} product={product} />
+                 <ItemList key={product.id} product={product} />
              </Grid>
             ))
         }

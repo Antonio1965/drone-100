@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   action: {
     marginTop: "1rem",
+    fontSize: '20px',
   },
   media: {
     height: 0,
@@ -55,7 +56,7 @@ export function Item({
           action={
             <Typography
               className={classes.action}
-              variant="h6"
+              variant="p"
               color="textSecondary"
             >
               {accounting.formatMoney(price)}

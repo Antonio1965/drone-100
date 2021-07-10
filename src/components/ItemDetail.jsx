@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import { Card } from '@material-ui/core';
+import { CardHeader } from '@material-ui/core';
+import { CardMedia } from '@material-ui/core';
+import { CardContent } from '@material-ui/core';
+import { CardActions } from '@material-ui/core';
+import { Collapse } from '@material-ui/core';
+import { IconButton } from '@material-ui/core';
+import { Typography }from '@material-ui/core';
 import { red } from '@material-ui/core/colors';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import accounting from 'accounting';
 import { AddShoppingCart } from "@material-ui/icons";
-import { products } from "../product-data";
+// import { products } from "../product-data";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,20 +43,20 @@ const useStyles = makeStyles((theme) => ({
 
 export function ItemDetail() {
 
-  const product = products.product;
-    const [listItems, setListItems ] = useState([]);
+  // const product = products.product;
+  //   const [listItems, setListItems ] = useState([]);
   
-    const getItems = () => {
-        return new Promise ((resolve, rejet)=>{
-        setTimeout(()=>{
-            resolve(products)
-        },2000
-        )})
-    }
-    getItems()
-    .then((resolse) => setListItems(resolse))
+  //   const getItems = () => {
+  //       return new Promise ((resolve, rejet)=>{
+  //       setTimeout(()=>{
+  //           resolve(products)
+  //       },2000
+  //       )})
+  //   }
+  //   getItems()
+  //   .then((resolse) => setListItems(resolse))
   
-  console.log(products);
+  // console.log(products);
 
 
   const classes = useStyles();

@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import {Badge} from '@material-ui/core';
-import logo from '../img/logo/antonio1.svg';
+import logo from '../../img/logo/antonio1.svg';
 import { ShoppingCart } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(4),
   },
   image: {
-      marginRight: '10px',
+      marginRight: '5px',
       height: '4rem',
   },
   
@@ -45,7 +45,7 @@ export  function NavBar({title}) {
               <img
                 className={classes.image}
                 src={logo}
-                height="45px"
+                height="30px"
                 alt="logo"
               />
               <h1 className="nav-title">{title}</h1>

@@ -12,6 +12,7 @@ import { Typography } from "@material-ui/core";
 import ExpandMoreIcon  from "@material-ui/icons/ExpandMore";
 import accounting from "accounting";
 import { AddShoppingCart } from "@material-ui/icons";
+import { Link } from 'react-router-dom';
 
 
 
@@ -50,7 +51,7 @@ export function Item({
   };
 
   return (
-    // <IconButton className= 'botton-detail'>
+    <Link to={'/item/${item.id}'}>
       <Card className={classes.root}>
         <CardHeader
           action={
@@ -99,6 +100,6 @@ export function Item({
           </CardContent>
         </Collapse>
       </Card>
-    // {/* </IconButton> */}
+      </Link>
   );
 }

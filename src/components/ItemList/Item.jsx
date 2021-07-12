@@ -51,7 +51,7 @@ export function Item({
   };
 
   return (
-    <Link to={'/item/${item.id}'}>
+    <Link to={`/item/${id}`}>
       <Card className={classes.root}>
         <CardHeader
           action={

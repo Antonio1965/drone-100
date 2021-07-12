@@ -4,10 +4,9 @@ import { NavBar } from "./components/General/NavBar";
 import { Footer } from "./components/General/Footer";
 import { ItemListContainer } from "./components/ItemList/ItemListContainer";
 import { ItemDetailContainer } from './components/ItemDetail/ItemDetailContainer';
-import { Counter } from "./components/Counter/Counter";
-import { ItemDetail } from "./components/ItemDetail/ItemDetail";
-import ItemDetailContainer1 from "./components/ItemDetail1.jsx/ItemDetailContainer1";
+// import { ItemDetail } from "./components/ItemDetail/ItemDetail";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 export function App() {
   return (
@@ -18,13 +17,12 @@ export function App() {
           <Route exact path="/">
             <ItemListContainer />
           </Route>
-          <Route path="/item/:id">
+          <Route path="/item:id">
             <ItemDetailContainer/>
           </Route>
         </Switch>
         <Footer autor="Copyright &copy; -Tsutsumi Jose Antonio - Junio 2021." />
       </Router>
-      ;
     </>
   );
 }

@@ -1,0 +1,4 @@
+Hola, Conrado
+
+Alli en la pagina de ItemListContainer, pararece todos los cart, y cuando hago click al cart numero dos ,por ejemplo , en la parte de link figura localhost 3000/item/2 , pero no me renderiza la pagina de ListDetailContainer.???
+Estoy usando mal el useParams???

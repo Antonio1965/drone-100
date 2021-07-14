@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export const ItemDetail = ({listItems : item}) => {
+export const ItemDetail = ({listItems:item}) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 

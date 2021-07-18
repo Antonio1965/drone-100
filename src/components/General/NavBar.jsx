@@ -9,6 +9,9 @@ import IconButton from '@material-ui/core/IconButton';
 import {Badge} from '@material-ui/core';
 import logo from '../../img/logo/antonio1.svg';
 import { ShoppingCart } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+import { useStateValue } from "../../StateProvider";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,11 +39,13 @@ const useStyles = makeStyles((theme) => ({
 
 export  function NavBar({title}) {
   const classes = useStyles();
+  const [{basket}, dispatch] = useStateValue();
 
   return (
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
+          <Link to='/'>
             <IconButton>
               <img
                 className={classes.image}
@@ -50,17 +55,19 @@ export  function NavBar({title}) {
               />
               <h1 className="nav-title">{title}</h1>
             </IconButton>
+            </Link>
           <div className={classes.grow} />
           <Typography variant="h5" component="p">
-            <strong>Hello Guest</strong>
+            <strong className='hello'>Hello Guest</strong>
           </Typography>
           <div className={classes.button}>
             <Button  variant= 'outlined'>
            <span className='boton'>Sing In</span> 
             </Button>
           </div>
+          <Link to='/checkout-page'>
             <IconButton aria-label="show cart items" color="inherent">
-              <Badge badgeContent={5} color="secondary">
+              <Badge badgeContent={basket?.length} color="secondary">
                 <ShoppingCart
                   fontSize="large"
                   className="carro"
@@ -68,6 +75,7 @@ export  function NavBar({title}) {
                 />
               </Badge>
             </IconButton>
+            </Link>
         </Toolbar>
       </AppBar>
     </div>

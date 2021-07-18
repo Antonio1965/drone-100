@@ -10,7 +10,7 @@ const StyledLoaderContainer = styled.div`
 	align-items: center;
 `;
 
-const Loader = () => {
+export const Loader = () => {
 	return (
 		<StyledLoaderContainer>
 			<PushSpinner color="#3f51b5" loading />
@@ -18,4 +18,3 @@ const Loader = () => {
 	);
 };
 
-export default Loader;
